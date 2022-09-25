@@ -1,6 +1,23 @@
-// Styles
-
 // Components
+export { default as uiEmbed } from "./components/base/ui-embed/index.vue"
+export { default as uiAlert } from "./components/base/ui-alert.vue"
+export { default as uiAvatar } from "./components/base/ui-avatar.vue"
+export { default as uiBadge } from "./components/base/ui-badge.vue"
+export { default as uiButton } from "./components/base/ui-button.vue"
+export { default as uiButtonIcon } from "./components/base/ui-button-icon.vue"
+export { default as uiCheckbox } from "./components/base/ui-checkbox.vue"
+export { default as uiContacts } from "./components/base/ui-contacts.vue"
+export { default as uiDelimiter } from "./components/base/ui-delimiter.vue"
+export { default as uiIcon } from "./components/base/ui-icon.vue"
+export { default as uiImage } from "./components/base/ui-image.vue"
+export { default as uiInput } from "./components/base/ui-input.vue"
+export { default as uiLogo } from "./components/base/ui-logo.vue"
+export { default as uiModal } from "./components/base/ui-modal.vue"
+export { default as uiModalSwipe } from "./components/base/ui-modal-swipe.vue"
+export { default as uiTabs } from "./components/base/ui-tabs.vue"
+export { default as uiTag } from "./components/base/ui-tag.vue"
+export { default as uiText } from "./components/base/ui-text.vue"
+export { default as uiTooltip } from "./components/base/ui-tooltip.vue"
 
 // Types
-
+export * from "./types"
