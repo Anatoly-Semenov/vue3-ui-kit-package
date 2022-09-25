@@ -1,0 +1,27 @@
+custom-scrollbar()
+	padding-right 13px
+
+	&::-webkit-scrollbar
+		width 5px
+		height 5px
+
+		&:hover
+			width 9px
+
+	&::-webkit-scrollbar-track
+		background none
+
+	&::-webkit-scrollbar-track-piece
+		background-color $color-panel-scrollbar-thumb
+
+	&::-webkit-scrollbar-thumb
+		height 30px
+		width 5px
+		background-color $color-panel-scrollbar-track
+		border-radius 50px
+
+		&:active
+			hover #000
+
+	&::-webkit-scrollbar-corner
+		background-color #ffffff
