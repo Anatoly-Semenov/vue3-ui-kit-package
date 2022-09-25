@@ -1,0 +1,21 @@
+.ui-checkbox
+	transition opacity $transition
+
+	&::v-deep
+		& .ant-checkbox-checked .ant-checkbox-inner
+			border-color $color-ui
+			background-color $color-ui
+
+		& .ant-checkbox-inner
+			border-radius 3px
+
+		& .ant-checkbox + span
+			padding $padding-small
+			color #656565
+
+	&._loading
+		opacity .8
+
+	&__switch
+		&.ant-switch-checked
+			background-color $color-ui

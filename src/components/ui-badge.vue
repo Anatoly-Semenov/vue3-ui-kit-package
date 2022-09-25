@@ -62,14 +62,3 @@ const props = defineProps({
 	title: String
 })
 </script>
-
-<style lang="stylus" scoped>
-@import "~ant-design-vue/lib/badge/style/index.css"
-@import "../assets/styles/base/variables.styl"
-
-.ui-badge
-	& sup p
-		font-size 12px
-		line-height 20px
-		margin-top 1px
-</style>

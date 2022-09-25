@@ -38,11 +38,3 @@ const props = defineProps({
 	}
 })
 </script>
-
-<style lang="stylus" scoped>
-@import "~ant-design-vue/lib/tooltip/style/index.css"
-
-.ui-tooltip
-	&__wrapper
-		opacity 1
-</style>

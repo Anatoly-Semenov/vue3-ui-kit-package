@@ -35,23 +35,3 @@ const listTag = computed(() => {
 	return props.type === "number" ? "ol" : "ul"
 })
 </script>
-
--
-<style lang="stylus" scoped>
-@import "../assets/styles/base/variables.styl"
-
-.ui-list
-	&:not(._checkbox)
-		padding-left 13px
-		color $color-text
-
-		&:not(._checkbox) &__item
-			font-size 14px
-			color $color-text
-
-			&:not(:first-child)
-				margin-top $padding-small
-
-	&._checkbox
-		list-style none
-</style>

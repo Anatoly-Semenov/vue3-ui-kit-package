@@ -41,13 +41,3 @@ const onError = (error: string) => {
 onMounted(generateQr)
 watchEffect(generateQr)
 </script>
-
-<style lang="stylus" scoped>
-@import "../assets/styles/base/variables.styl"
-
-.ui-qr-code
-	display: inline-flex
-	border-radius: $border-radius
-	background-color: #ffffff
-	overflow: hidden
-</style>

@@ -31,14 +31,3 @@ const props = defineProps({
 	}
 })
 </script>
-
-<style lang="stylus" scoped>
-@import "~ant-design-vue/lib/tag/style/index.css"
-@import "../assets/styles/base/variables.styl"
-
-.ui-tag
-	border-radius $border-radius
-	height 22px
-	padding 0 $padding-small
-	font-size 12px
-</style>

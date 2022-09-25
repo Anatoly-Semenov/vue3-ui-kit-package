@@ -38,10 +38,3 @@ const props = defineProps({
 	src: String
 })
 </script>
-
-<style lang="stylus" scoped>
-@import "~ant-design-vue/lib/image/style/index.css"
-
-.ui-image
-	opacity 1
-</style>

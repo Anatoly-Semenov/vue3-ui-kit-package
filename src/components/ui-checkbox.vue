@@ -112,32 +112,3 @@ const model = computed({
 	}
 })
 </script>
-
-<style lang="stylus" scoped>
-@import "~ant-design-vue/lib/checkbox/style/index.css"
-@import "~ant-design-vue/lib/switch/style/index.css"
-
-@import "../assets/styles/base/variables.styl"
-
-.ui-checkbox
-	transition opacity $transition
-
-	&::v-deep
-		& .ant-checkbox-checked .ant-checkbox-inner
-			border-color $color-ui
-			background-color $color-ui
-
-		& .ant-checkbox-inner
-			border-radius 3px
-
-		& .ant-checkbox + span
-			padding $padding-small
-			color #656565
-
-	&._loading
-		opacity .8
-
-	&__switch
-		&.ant-switch-checked
-			background-color $color-ui
-</style>

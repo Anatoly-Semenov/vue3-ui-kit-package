@@ -33,38 +33,3 @@ const props = defineProps({
 	}
 })
 </script>
-
-<style scoped lang="stylus">
-@import "../assets/styles/base/variables.styl"
-@import "../assets/styles/mixins/flex-center.styl"
-
-.ui-links
-	display flex
-	flex-direction column
-	background-color $color-background-secondary
-	border-radius $border-radius
-	min-width 200px
-
-	&__item
-		display flex
-		justify-content space-between
-		align-items center
-		width 100%
-		height 40px
-		padding $padding-small
-		transition opacity $transition
-
-		&:hover
-			opacity .7
-
-		&:active
-			opacity .5
-
-	&__info
-		flex-center()
-
-	&__text
-		font-size 14px
-		color $color-text
-		margin-left 10px
-</style>

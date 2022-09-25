@@ -52,38 +52,3 @@ const icon = (name: UiIcon.Name): Component => {
 	)
 }
 </script>
-
-<style lang="stylus" scoped>
-@import "../assets/styles/base/variables.styl"
-@import "../assets/styles/mixins/flex-center.styl"
-
-.ui-icon
-	transition transform $transition
-
-	& :deep(path)
-		fill $color-text
-
-	&._s
-		//height 16px
-		//width 16px
-		transform scale(0.7)
-
-	&._m
-		//height 24px
-		//width 24px
-		transform scale(1)
-
-	&._l
-		//height 32px
-		//width 32px
-		transform scale(1.3)
-
-	&._hover
-		cursor pointer
-
-		& :deep(path)
-			transition fill $transition
-
-		&:hover :deep(path)
-			fill $color-ui
-</style>

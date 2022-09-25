@@ -18,15 +18,3 @@ const props = defineProps({
 	}
 })
 </script>
-<style lang="stylus">
-@import "@/assets/styles/base/variables.styl"
-
-.ui-delimiter
-	border none
-	border-top-style solid
-	border-top-color $color-border
-	border-top-width 1px
-
-	&._dashed
-		border-top-style dashed
-</style>
