@@ -1,0 +1,171 @@
+<template>
+	<button :class="selector" :disabled="disabled" @click="$emit('click')">
+		<ui-icon :name="name" />
+	</button>
+</template>
+
+<script setup lang="ts">
+import { computed, defineProps, PropType } from "vue"
+
+// Components
+import uiIcon from "./ui-icon.vue"
+
+// Types
+import { UiButtonIcon } from "@/types"
+
+const props = defineProps({
+	iconName: {
+		type: String as PropType<UiButtonIcon.IconName>,
+		default: "alert-circle"
+	},
+	loading: {
+		type: Boolean,
+		default: false
+	},
+	disabled: {
+		type: Boolean,
+		default: false
+	},
+	type: {
+		type: String as PropType<UiButtonIcon.Type>,
+		default: "icon"
+	},
+	size: {
+		type: String as PropType<UiButtonIcon.Size>,
+		default: "m"
+	}
+})
+
+const name = computed(() => {
+	return props.loading ? "loading" : props.iconName
+})
+
+const selector = computed(() => {
+	return `ui-button-icon _${props.type} _${props.size}${
+		props.loading ? " _loading" : ""
+	}${props.disabled ? " _disabled" : ""}`
+})
+</script>
+
+<style lang="stylus" scoped>
+@import "../assets/styles/base/variables.styl"
+@import "../assets/styles/mixins/flex-center.styl"
+@import "../assets/styles/animation/circle-load.styl"
+
+.ui-button-icon
+	flex-center()
+	border-radius $border-radius
+	transition-property background-color, border-color
+	transition-duration 0.4s
+	transition-timing-function ease
+	transition-delay 0s
+	border 2px solid transparent
+
+	& :deep(svg.ui-icon)
+		transform scale(0.9)
+
+	&._s
+		height 32px
+		width 32px
+
+	&._m
+		height 36px
+		width 36px
+
+	&._l
+		height 40px
+		width 40px
+
+	&._dark
+		background-color $color-background-invisible-10
+
+		& :deep(path)
+			fill #DADADA
+
+		&:hover
+			background-color $color-background-invisible-15
+
+		&:active
+			background-color $color-ui
+
+			& :deep(path)
+				fill $color-text
+
+		&:focus
+			border-color $color-background-invisible-10
+
+	&._icon
+		background-color transparent
+
+		& :deep(path)
+			fill $color-text
+
+		&:hover, &:focus
+			background-color $color-background-invisible-10
+
+		&:active
+			background-color $color-background-invisible-20
+			border-color transparent
+
+		&:focus
+			border-color $color-background-invisible-10
+
+	&._icon-dark
+		background-color transparent
+
+		& :deep(path)
+			fill $color-text-third
+
+		&:hover, &:focus
+			background-color $color-background-invisible-10
+
+		&:focus
+			border-color $color-background-invisible-10
+
+		&:active
+			background-color transparent
+			border-color transparent
+
+			& :deep(path)
+				fill $color-ui
+
+	&._primary
+		background-color $color-ui
+
+		&:hover
+			background-color $color-ui-hover
+
+		&:active
+			background-color $color-ui-active
+
+		&:focus
+			border-color $color-border-ui
+
+		&._disabled
+			background-color $color-background-disabled
+
+	&._ghost
+		background-color transparent
+		border $border-ui
+
+		&:hover
+			border-color $color-ui-hover
+
+		&:active
+			border-color $color-ui-active
+
+		&:focus
+			border-color $color-ui-active
+
+		&._disabled
+			border-color $color-border-disabled
+
+	&._loading :deep(svg)
+		animation 1s linear 0s normal none infinite running circle-load
+		-webkit-animation 1s linear 0s normal none infinite running circle-load
+
+	&._disabled
+		pointer-events none
+		cursor no-drop
+		opacity 1
+</style>
