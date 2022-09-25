@@ -1,0 +1,14 @@
+.ui-list
+	&:not(._checkbox)
+		padding-left 13px
+		color $color-text
+
+		&:not(._checkbox) &__item
+			font-size 14px
+			color $color-text
+
+			&:not(:first-child)
+				margin-top $padding-small
+
+	&._checkbox
+		list-style none
